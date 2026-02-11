@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace _Un_Solid
 {
-    public class DatabaseInvoiceSaver : IInvoiceSaver
+    public class DatabaseInvoiceSaver : IDatabaseSaver
     {
+        public void CreateConnection()
+        {
+            // kode til db-connection ... 
+             Console.WriteLine("Creating database connection...");
+        }
+
         public virtual void Save(List<Invoice> invoices)
         {
             Console.WriteLine("Saving invoices to database...");

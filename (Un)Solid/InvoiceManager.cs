@@ -21,32 +21,18 @@ public class InvoiceManager
 
     public void SaveToDatabase()
     {
-        //DatabaseInvoiceSaver repository = new DatabaseInvoiceSaver();
-        //repository.Save(invoices);
         invoiceSaver.Save(invoices);
-        //Console.WriteLine("Saving invoices to database...");
+
         // kode til database gemt direkte her
     }
 
     public void PrintInvoices()
     {
         invoicePrinter.Print(invoices);
-        //InvoicePrinter printer = new InvoicePrinter();
-        //printer.Print(invoices);
-        //foreach (var invoice in invoices)
-        //{
-        //    Console.WriteLine($"Invoice {invoice.Id}: {invoice.Amount} DKK");
-        //}
     }
 
     public void SendInvoicesByEmail()
     {
         emailService.Send(invoices);
-        //EmailService emailService = new EmailService(); 
-        //emailService.Send(invoices);
-        //foreach (var invoice in invoices)
-        //{
-        //    Console.WriteLine($"Sending invoice {invoice.Id} by email...");
-        //}
     }
 }

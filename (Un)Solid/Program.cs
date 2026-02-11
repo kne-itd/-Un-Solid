@@ -1,6 +1,8 @@
 ﻿/* 
- * Løsning:
- * Del funktionaliteten op i flere klasser, hvor hver klasse har et enkelt ansvar.
+ * Problem:
+ * Det er nødvendigt at tilføje en connect-metode i (alle) DatabaseInvoiceSaver klasse(r)). 
+ * Filesaver klassen har dog ikke behov for en connection.
+ * Løsning: Interface Segregation Principle (ISP) - opdel IInvoiceSaver i to interfaces: IInvoiceSaver og IInvoiceSaver.
 */
 using _Un_Solid;
 
