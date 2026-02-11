@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _Un_Solid
 {
-    public class EmailService
+    public class EmailService : IEmailService
     {
         public void Send(List<Invoice> invoices)
         {

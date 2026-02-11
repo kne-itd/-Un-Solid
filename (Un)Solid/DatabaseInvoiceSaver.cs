@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _Un_Solid
 {
-    public class InvoiceRepository
+    public class DatabaseInvoiceSaver : IInvoiceSaver
     {
         public virtual void Save(List<Invoice> invoices)
         {

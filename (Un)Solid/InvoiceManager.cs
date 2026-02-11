@@ -2,6 +2,16 @@
 
 public class InvoiceManager
 {
+    private IInvoiceSaver invoiceSaver;
+    private IEmailService emailService;
+    private IInvoicePrinter invoicePrinter;
+
+     public InvoiceManager(IInvoiceSaver invoiceSaver, IEmailService emailService, IInvoicePrinter invoicePrinter)
+    {
+        this.invoiceSaver = invoiceSaver;
+        this.emailService = emailService;
+        this.invoicePrinter = invoicePrinter;
+    }
     private List<Invoice> invoices = new List<Invoice>();
 
     public void AddInvoice(Invoice invoice)
@@ -11,7 +21,7 @@ public class InvoiceManager
 
     public void SaveToDatabase()
     {
-        InvoiceRepository repository = new InvoiceRepository();
+        DatabaseInvoiceSaver repository = new DatabaseInvoiceSaver();
         repository.Save(invoices);
         //Console.WriteLine("Saving invoices to database...");
         // kode til database gemt direkte her

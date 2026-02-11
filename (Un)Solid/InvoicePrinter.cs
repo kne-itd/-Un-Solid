@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _Un_Solid
 {
-    public class InvoicePrinter
+    public class InvoicePrinter : IInvoicePrinter
     {
         public void Print(List<Invoice> invoices)
         {
